@@ -19,14 +19,18 @@
 		9C95129916FE79B8000F72D1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C95129816FE79B8000F72D1 /* Default-568h@2x.png */; };
 		9C95129C16FE79B8000F72D1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C95129A16FE79B8000F72D1 /* MainStoryboard.storyboard */; };
 		9C95129F16FE79B8000F72D1 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C95129D16FE79B8000F72D1 /* Notes.xcdatamodeld */; };
-		9C9512A216FE79B8000F72D1 /* LMSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512A116FE79B8000F72D1 /* LMSMasterViewController.m */; };
-		9C9512A516FE79B8000F72D1 /* LMSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512A416FE79B8000F72D1 /* LMSDetailViewController.m */; };
 		9C9512AD16FE79B8000F72D1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9512AC16FE79B8000F72D1 /* SenTestingKit.framework */; };
 		9C9512AE16FE79B8000F72D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95128016FE79B8000F72D1 /* UIKit.framework */; };
 		9C9512AF16FE79B8000F72D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95128216FE79B8000F72D1 /* Foundation.framework */; };
 		9C9512B016FE79B8000F72D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95128616FE79B8000F72D1 /* CoreData.framework */; };
 		9C9512B816FE79B8000F72D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C9512B616FE79B8000F72D1 /* InfoPlist.strings */; };
 		9C9512BB16FE79B8000F72D1 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512BA16FE79B8000F72D1 /* NotesTests.m */; };
+		9C9512C616FE8F4E000F72D1 /* LMSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512C516FE8F4E000F72D1 /* LMSMasterViewController.m */; };
+		9C9512C916FE959D000F72D1 /* LMSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512C816FE959D000F72D1 /* LMSNote.m */; };
+		9C9512CC16FEA674000F72D1 /* LMSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512CB16FEA673000F72D1 /* LMSDetailViewController.m */; };
+		9C9512CE16FEA705000F72D1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9512CD16FEA705000F72D1 /* CoreLocation.framework */; };
+		9C9512D016FEA715000F72D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9512CF16FEA715000F72D1 /* MapKit.framework */; };
+		9C9512D316FFB8AC000F72D1 /* LMSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512D216FFB8AC000F72D1 /* LMSLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,16 +60,22 @@
 		9C95129816FE79B8000F72D1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9C95129B16FE79B8000F72D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9C95129E16FE79B8000F72D1 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
-		9C9512A016FE79B8000F72D1 /* LMSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSMasterViewController.h; sourceTree = "<group>"; };
-		9C9512A116FE79B8000F72D1 /* LMSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSMasterViewController.m; sourceTree = "<group>"; };
-		9C9512A316FE79B8000F72D1 /* LMSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMSDetailViewController.h; sourceTree = "<group>"; };
-		9C9512A416FE79B8000F72D1 /* LMSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMSDetailViewController.m; sourceTree = "<group>"; };
 		9C9512AB16FE79B8000F72D1 /* NotesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9512AC16FE79B8000F72D1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C9512B516FE79B8000F72D1 /* NotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotesTests-Info.plist"; sourceTree = "<group>"; };
 		9C9512B716FE79B8000F72D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C9512B916FE79B8000F72D1 /* NotesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesTests.h; sourceTree = "<group>"; };
 		9C9512BA16FE79B8000F72D1 /* NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesTests.m; sourceTree = "<group>"; };
+		9C9512C416FE8F4E000F72D1 /* LMSMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMSMasterViewController.h; path = ../LMSMasterViewController.h; sourceTree = "<group>"; };
+		9C9512C516FE8F4E000F72D1 /* LMSMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMSMasterViewController.m; path = ../LMSMasterViewController.m; sourceTree = "<group>"; };
+		9C9512C716FE959D000F72D1 /* LMSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSNote.h; sourceTree = "<group>"; };
+		9C9512C816FE959D000F72D1 /* LMSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSNote.m; sourceTree = "<group>"; };
+		9C9512CA16FEA673000F72D1 /* LMSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSDetailViewController.h; sourceTree = "<group>"; };
+		9C9512CB16FEA673000F72D1 /* LMSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSDetailViewController.m; sourceTree = "<group>"; };
+		9C9512CD16FEA705000F72D1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9C9512CF16FEA715000F72D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9C9512D116FFB8AC000F72D1 /* LMSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSLocation.h; sourceTree = "<group>"; };
+		9C9512D216FFB8AC000F72D1 /* LMSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9512D016FEA715000F72D1 /* MapKit.framework in Frameworks */,
+				9C9512CE16FEA705000F72D1 /* CoreLocation.framework in Frameworks */,
 				9C95128116FE79B8000F72D1 /* UIKit.framework in Frameworks */,
 				9C95128316FE79B8000F72D1 /* Foundation.framework in Frameworks */,
 				9C95128516FE79B8000F72D1 /* CoreGraphics.framework in Frameworks */,
@@ -97,6 +109,8 @@
 		9C95127416FE79B8000F72D1 = {
 			isa = PBXGroup;
 			children = (
+				9C9512CF16FEA715000F72D1 /* MapKit.framework */,
+				9C9512CD16FEA705000F72D1 /* CoreLocation.framework */,
 				9C95128816FE79B8000F72D1 /* Notes */,
 				9C9512B316FE79B8000F72D1 /* NotesTests */,
 				9C95127F16FE79B8000F72D1 /* Frameworks */,
@@ -128,14 +142,18 @@
 		9C95128816FE79B8000F72D1 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				9C9512C416FE8F4E000F72D1 /* LMSMasterViewController.h */,
+				9C9512C516FE8F4E000F72D1 /* LMSMasterViewController.m */,
 				9C95129116FE79B8000F72D1 /* LMSAppDelegate.h */,
 				9C95129216FE79B8000F72D1 /* LMSAppDelegate.m */,
 				9C95129A16FE79B8000F72D1 /* MainStoryboard.storyboard */,
-				9C9512A016FE79B8000F72D1 /* LMSMasterViewController.h */,
-				9C9512A116FE79B8000F72D1 /* LMSMasterViewController.m */,
-				9C9512A316FE79B8000F72D1 /* LMSDetailViewController.h */,
-				9C9512A416FE79B8000F72D1 /* LMSDetailViewController.m */,
+				9C9512CA16FEA673000F72D1 /* LMSDetailViewController.h */,
+				9C9512CB16FEA673000F72D1 /* LMSDetailViewController.m */,
 				9C95129D16FE79B8000F72D1 /* Notes.xcdatamodeld */,
+				9C9512D116FFB8AC000F72D1 /* LMSLocation.h */,
+				9C9512D216FFB8AC000F72D1 /* LMSLocation.m */,
+				9C9512C716FE959D000F72D1 /* LMSNote.h */,
+				9C9512C816FE959D000F72D1 /* LMSNote.m */,
 				9C95128916FE79B8000F72D1 /* Supporting Files */,
 			);
 			path = Notes;
@@ -288,8 +306,10 @@
 				9C95128F16FE79B8000F72D1 /* main.m in Sources */,
 				9C95129316FE79B8000F72D1 /* LMSAppDelegate.m in Sources */,
 				9C95129F16FE79B8000F72D1 /* Notes.xcdatamodeld in Sources */,
-				9C9512A216FE79B8000F72D1 /* LMSMasterViewController.m in Sources */,
-				9C9512A516FE79B8000F72D1 /* LMSDetailViewController.m in Sources */,
+				9C9512C616FE8F4E000F72D1 /* LMSMasterViewController.m in Sources */,
+				9C9512C916FE959D000F72D1 /* LMSNote.m in Sources */,
+				9C9512CC16FEA674000F72D1 /* LMSDetailViewController.m in Sources */,
+				9C9512D316FFB8AC000F72D1 /* LMSLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +490,7 @@
 				9C9512C016FE79B8000F72D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C9512C116FE79B8000F72D1 /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +499,7 @@
 				9C9512C316FE79B8000F72D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

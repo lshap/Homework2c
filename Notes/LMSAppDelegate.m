@@ -18,10 +18,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    LMSNote *note = [NSEntityDescription
+                                       insertNewObjectForEntityForName:@"Note"
+                                       inManagedObjectContext:context];
+    [note setValue:@"Test Note" forKey:@"title"];
+    [note setValue:@"Test Description" forKey:@"note_description"];
+    
+    LMSLocation *location = [NSEntityDescription
+                     insertNewObjectForEntityForName:@"Location"
+                     inManagedObjectContext:context];
+    [location setValue:@0.00 forKey:@"xcoord"];
+    [location setValue:@130.00 forKey:@"ycoord"];
+    [note setValue:location forKey:@"location"];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     LMSMasterViewController *controller = (LMSMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Note" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+
+    
+    
+
+//    for (LMSNote *info in fetchedObjects) {
+//        NSLog(@"Title: %@", [info valueForKey:@"title"]);
+//    }
+    
     return YES;
 }
 							
