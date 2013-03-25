@@ -35,10 +35,15 @@
     [fetchRequest setEntity:entity];
     NSError *error;
     self.notes = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+//    NSArray *fetchedObjects = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
     self.title = @"Notes";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
+     for (Note *info in self.notes) {
+         Note* note = info;
+         Location* location = note.location;
+     }
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -60,9 +65,11 @@
         NSIndexPath *currpath = [[NSIndexPath alloc]init];
         currpath = self.tableView.indexPathForSelectedRow;
 
-        LMSNote *currnote = _notes[currpath.row];
+        Note *currnote = _notes[currpath.row];
        [ detailViewController setTitleText: currnote.title];
        [detailViewController setDescriptionText: currnote.note_description];
+//       [detailViewController setLatitude:currnote.location.latitude.doubleValue];
+//       [detailViewController setLongitude:currnote.location.longitude.doubleValue];
     }
     
     else
@@ -99,7 +106,7 @@
     [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Set up the cell...
-    LMSNote *info = [_notes objectAtIndex:indexPath.row];
+    Note *info = [_notes objectAtIndex:indexPath.row];
     cell.textLabel.text = info.title;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",
                                  info.title];

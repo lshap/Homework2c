@@ -10,5 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface LMSLocation : NSManagedObject
-@property(strong, nonatomic)CLLocation* location;
+@property double latitude;
+@property double longitude;
 @end

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LMSNote.h"
-#import "LMSLocation.h"
+#import "Note.h"
+#import "Location.h"
 @interface LMSAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

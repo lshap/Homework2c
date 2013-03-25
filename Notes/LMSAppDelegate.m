@@ -19,23 +19,41 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSManagedObjectContext *context = [self managedObjectContext];
-    LMSNote *note = [NSEntityDescription
-                                       insertNewObjectForEntityForName:@"Note"
-                                       inManagedObjectContext:context];
+    Note *note = [NSEntityDescription
+                     insertNewObjectForEntityForName:@"Note"
+                     inManagedObjectContext:context];
     [note setValue:@"Test Note" forKey:@"title"];
     [note setValue:@"Test Description" forKey:@"note_description"];
-    
-    LMSLocation *location = [NSEntityDescription
-                     insertNewObjectForEntityForName:@"Location"
-                     inManagedObjectContext:context];
-    [location setValue:@0.00 forKey:@"xcoord"];
-    [location setValue:@130.00 forKey:@"ycoord"];
-    [note setValue:location forKey:@"location"];
-    
+    LMSLocation *testlocation = [NSEntityDescription
+                                 insertNewObjectForEntityForName:@"Location"
+                                 inManagedObjectContext:context];
+    [testlocation setValue:@0.00 forKey:@"latitude"];
+    [testlocation setValue:@130.00 forKey:@"longitude"];
+    [testlocation setValue:note forKey:@"parentnote"];
+    [note setValue:testlocation forKey:@"location"];
     NSError *error;
     if (![context save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
+    
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//    LMSNote *note = [NSEntityDescription
+//                                       insertNewObjectForEntityForName:@"Note"
+//                                       inManagedObjectContext:context];
+//    [note setValue:@"Test Note" forKey:@"title"];
+//    [note setValue:@"Test Description" forKey:@"note_description"];
+//    
+//    LMSLocation *location = [NSEntityDescription
+//                     insertNewObjectForEntityForName:@"Location"
+//                     inManagedObjectContext:context];
+//    [location setValue:@0.00 forKey:@"latitude"];
+//    [location setValue:@130.00 forKey:@"longitude"];
+//    [note setValue:location forKey:@"location"];
+//    
+//    NSError *error;
+//    if (![context save:&error]) {
+//        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+//    }
     
     
     // Override point for customization after application launch.
@@ -52,9 +70,12 @@
     
     
 
-//    for (LMSNote *info in fetchedObjects) {
-//        NSLog(@"Title: %@", [info valueForKey:@"title"]);
-//    }
+    for (Note *info in fetchedObjects) {
+        NSLog(@"Title: %@", [info valueForKey:@"title"]);
+        Location *loc = info.location;
+        NSLog(@"Location Latitude: %@", loc.latitude);
+         NSLog(@"Location Longitude: %@", loc.longitude);
+    }
     
     return YES;
 }

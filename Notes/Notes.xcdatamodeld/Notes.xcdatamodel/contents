@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Location" syncable="YES">
-        <attribute name="xcoord" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="ycoord" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="parentnote" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="location" inverseEntity="Note" syncable="YES"/>
     </entity>
-    <entity name="Note" representedClassName="LMSNote">
+    <entity name="Note" representedClassName="Note">
         <attribute name="note_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String">
             <userInfo/>
@@ -14,7 +14,7 @@
         <userInfo/>
     </entity>
     <elements>
-        <element name="Note" positionX="207" positionY="-1251" width="128" height="88"/>
         <element name="Location" positionX="367" positionY="-1143" width="128" height="88"/>
+        <element name="Note" positionX="207" positionY="-1251" width="128" height="88"/>
     </elements>
 </model>

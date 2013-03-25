@@ -9,5 +9,6 @@
 #import "LMSLocation.h"
 
 @implementation LMSLocation
-
+@dynamic latitude;
+@dynamic longitude;
 @end

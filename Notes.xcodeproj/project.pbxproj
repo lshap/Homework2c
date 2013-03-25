@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C3350EE1700A08A002599D5 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3350ED1700A08A002599D5 /* Location.m */; };
+		9C3350F11700A09A002599D5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3350F01700A09A002599D5 /* Note.m */; };
 		9C95128116FE79B8000F72D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95128016FE79B8000F72D1 /* UIKit.framework */; };
 		9C95128316FE79B8000F72D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95128216FE79B8000F72D1 /* Foundation.framework */; };
 		9C95128516FE79B8000F72D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95128416FE79B8000F72D1 /* CoreGraphics.framework */; };
@@ -26,11 +28,9 @@
 		9C9512B816FE79B8000F72D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C9512B616FE79B8000F72D1 /* InfoPlist.strings */; };
 		9C9512BB16FE79B8000F72D1 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512BA16FE79B8000F72D1 /* NotesTests.m */; };
 		9C9512C616FE8F4E000F72D1 /* LMSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512C516FE8F4E000F72D1 /* LMSMasterViewController.m */; };
-		9C9512C916FE959D000F72D1 /* LMSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512C816FE959D000F72D1 /* LMSNote.m */; };
 		9C9512CC16FEA674000F72D1 /* LMSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512CB16FEA673000F72D1 /* LMSDetailViewController.m */; };
 		9C9512CE16FEA705000F72D1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9512CD16FEA705000F72D1 /* CoreLocation.framework */; };
 		9C9512D016FEA715000F72D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9512CF16FEA715000F72D1 /* MapKit.framework */; };
-		9C9512D316FFB8AC000F72D1 /* LMSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9512D216FFB8AC000F72D1 /* LMSLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C3350EC1700A08A002599D5 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		9C3350ED1700A08A002599D5 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		9C3350EF1700A09A002599D5 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		9C3350F01700A09A002599D5 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		9C95127D16FE79B8000F72D1 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C95128016FE79B8000F72D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C95128216FE79B8000F72D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,14 +72,10 @@
 		9C9512BA16FE79B8000F72D1 /* NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesTests.m; sourceTree = "<group>"; };
 		9C9512C416FE8F4E000F72D1 /* LMSMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMSMasterViewController.h; path = ../LMSMasterViewController.h; sourceTree = "<group>"; };
 		9C9512C516FE8F4E000F72D1 /* LMSMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMSMasterViewController.m; path = ../LMSMasterViewController.m; sourceTree = "<group>"; };
-		9C9512C716FE959D000F72D1 /* LMSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSNote.h; sourceTree = "<group>"; };
-		9C9512C816FE959D000F72D1 /* LMSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSNote.m; sourceTree = "<group>"; };
 		9C9512CA16FEA673000F72D1 /* LMSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSDetailViewController.h; sourceTree = "<group>"; };
 		9C9512CB16FEA673000F72D1 /* LMSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSDetailViewController.m; sourceTree = "<group>"; };
 		9C9512CD16FEA705000F72D1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9C9512CF16FEA715000F72D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		9C9512D116FFB8AC000F72D1 /* LMSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSLocation.h; sourceTree = "<group>"; };
-		9C9512D216FFB8AC000F72D1 /* LMSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +150,10 @@
 				9C9512CA16FEA673000F72D1 /* LMSDetailViewController.h */,
 				9C9512CB16FEA673000F72D1 /* LMSDetailViewController.m */,
 				9C95129D16FE79B8000F72D1 /* Notes.xcdatamodeld */,
-				9C9512D116FFB8AC000F72D1 /* LMSLocation.h */,
-				9C9512D216FFB8AC000F72D1 /* LMSLocation.m */,
-				9C9512C716FE959D000F72D1 /* LMSNote.h */,
-				9C9512C816FE959D000F72D1 /* LMSNote.m */,
+				9C3350EF1700A09A002599D5 /* Note.h */,
+				9C3350F01700A09A002599D5 /* Note.m */,
+				9C3350EC1700A08A002599D5 /* Location.h */,
+				9C3350ED1700A08A002599D5 /* Location.m */,
 				9C95128916FE79B8000F72D1 /* Supporting Files */,
 			);
 			path = Notes;
@@ -307,9 +307,9 @@
 				9C95129316FE79B8000F72D1 /* LMSAppDelegate.m in Sources */,
 				9C95129F16FE79B8000F72D1 /* Notes.xcdatamodeld in Sources */,
 				9C9512C616FE8F4E000F72D1 /* LMSMasterViewController.m in Sources */,
-				9C9512C916FE959D000F72D1 /* LMSNote.m in Sources */,
 				9C9512CC16FEA674000F72D1 /* LMSDetailViewController.m in Sources */,
-				9C9512D316FFB8AC000F72D1 /* LMSLocation.m in Sources */,
+				9C3350EE1700A08A002599D5 /* Location.m in Sources */,
+				9C3350F11700A09A002599D5 /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

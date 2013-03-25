@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "LMSNote.h"
-#import "LMSLocation.h"
+#import "Note.h"
+#import "Location.h"
 #import "LMSDetailViewController.h"
 
 @interface LMSMasterViewController : UITableViewController
