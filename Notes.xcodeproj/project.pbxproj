@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0EBFA6170286A6009C1A34 /* LMSAddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EBFA5170286A6009C1A34 /* LMSAddNoteViewController.m */; };
 		9C3350EE1700A08A002599D5 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3350ED1700A08A002599D5 /* Location.m */; };
 		9C3350F11700A09A002599D5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3350F01700A09A002599D5 /* Note.m */; };
 		9C95128116FE79B8000F72D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95128016FE79B8000F72D1 /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C0EBFA4170286A6009C1A34 /* LMSAddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSAddNoteViewController.h; sourceTree = "<group>"; };
+		9C0EBFA5170286A6009C1A34 /* LMSAddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSAddNoteViewController.m; sourceTree = "<group>"; };
 		9C3350EC1700A08A002599D5 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		9C3350ED1700A08A002599D5 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		9C3350EF1700A09A002599D5 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				9C95129116FE79B8000F72D1 /* LMSAppDelegate.h */,
 				9C95129216FE79B8000F72D1 /* LMSAppDelegate.m */,
 				9C95129A16FE79B8000F72D1 /* MainStoryboard.storyboard */,
+				9C0EBFA4170286A6009C1A34 /* LMSAddNoteViewController.h */,
+				9C0EBFA5170286A6009C1A34 /* LMSAddNoteViewController.m */,
 				9C9512CA16FEA673000F72D1 /* LMSDetailViewController.h */,
 				9C9512CB16FEA673000F72D1 /* LMSDetailViewController.m */,
 				9C95129D16FE79B8000F72D1 /* Notes.xcdatamodeld */,
@@ -310,6 +315,7 @@
 				9C9512CC16FEA674000F72D1 /* LMSDetailViewController.m in Sources */,
 				9C3350EE1700A08A002599D5 /* Location.m in Sources */,
 				9C3350F11700A09A002599D5 /* Note.m in Sources */,
+				9C0EBFA6170286A6009C1A34 /* LMSAddNoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

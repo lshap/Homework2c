@@ -29,6 +29,10 @@
     [super viewDidLoad];
     _notes = [[NSMutableArray alloc]init];
     
+    _locationManager = [[CLLocationManager alloc]init];
+    _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    _locationManager.delegate = self;
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:@"Note" inManagedObjectContext:_managedObjectContext];
@@ -54,6 +58,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)locationManager:(CLLocationManager*) manager didUpdateLocations:(NSArray*) locations
+{
+    self.lastLocation = [locations lastObject];
+}
+
+
 #pragma mark - Segue Methods
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -68,14 +79,51 @@
         Note *currnote = _notes[currpath.row];
        [ detailViewController setTitleText: currnote.title];
        [detailViewController setDescriptionText: currnote.note_description];
-//       [detailViewController setLatitude:currnote.location.latitude.doubleValue];
-//       [detailViewController setLongitude:currnote.location.longitude.doubleValue];
+
+        CLLocationDegrees lat = currnote.location.latitude.doubleValue;
+        CLLocationDegrees lon = currnote.location.longitude.doubleValue;
+        CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lat,lon);
+    [detailViewController setViewCoordinate: coord];
     }
     
     else
     {
-//        [self.locationManager startUpdatingLocation];
+        [self.locationManager startUpdatingLocation];
     }
+}
+
+-(IBAction)unwindFromAddNoteViewWithAdd:(UIStoryboardSegue *)segue {
+    LMSAddNoteViewController* vc = [segue sourceViewController];
+    NSString* newnotetitle = vc.titleInputField.text;
+    NSString* newnotedescription = vc.descriptionInputField.text;
+    
+    NSNumber* newlatitude = [NSNumber numberWithDouble:self.lastLocation.coordinate.latitude];
+    NSNumber* newlongitude = [NSNumber numberWithDouble:self.lastLocation.coordinate.longitude];
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Note *note = [NSEntityDescription
+                  insertNewObjectForEntityForName:@"Note"
+                  inManagedObjectContext:context];
+    [note setValue: newnotetitle forKey:@"title"];
+    [note setValue: newnotedescription forKey:@"note_description"];
+    LMSLocation *testlocation = [NSEntityDescription
+                                 insertNewObjectForEntityForName:@"Location"
+                                 inManagedObjectContext:context];
+    [testlocation setValue:newlatitude forKey:@"latitude"];
+    [testlocation setValue:newlongitude forKey:@"longitude"];
+    [testlocation setValue:note forKey:@"parentnote"];
+    [note setValue:testlocation forKey:@"location"];
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    [self.locationManager stopUpdatingLocation];
+    [self.tableView reloadData];
+}
+
+-(IBAction)unwindFromAddNoteViewWithCancel:(UIStoryboardSegue *)segue {
+    
 }
 
 -(IBAction)unwindFromDetailView:(UIStoryboardSegue *)segue {

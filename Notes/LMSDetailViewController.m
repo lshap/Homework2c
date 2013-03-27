@@ -51,32 +51,19 @@
 {
     _titleText = titletext;
 }
-//-(void) setViewLocation:(LMSLocation*)currentlocation
-//{
-//    MKMapPoint point = MKMapPointMake(currentlocation.latitude, currentlocation.longitude);
-//   _coord = MKCoordinateForMapPoint(point);
-//    
-//}
 
--(void) setLatitude:(double)currentlatitude{
-    self.latitude = currentlatitude;
-}
--(void) setLongitude:(double)currentlongitude{
-    self.longitude = currentlongitude;
+-(void) setViewCoordinate:(CLLocationCoordinate2D) newcoord{
+    
+    self.coord = newcoord;
 }
 
-//
-//- (void)addPinToMapAtLocation:(CLLocation *)location
 - (void)addPinToMapAtLocation:(CLLocationCoordinate2D)location
 {
-     NSLog(@"Location Latitude in DetailView: %f", location.latitude);
-     NSLog(@"Location Longitude in DetailView: %f", location.longitude);
     MKPointAnnotation* pin = [[MKPointAnnotation alloc]init];
-//    pin.coordinate = self.location.coordinate;
+    
     pin.coordinate = self.coord;
     [self.mapView addAnnotation:pin];
-//    
-//    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.location.coordinate, 1000, 1000);
+    
        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.coord, 1000, 1000);
     [self.mapView setRegion:region];
     [self.mapView setCenterCoordinate: pin.coordinate animated: YES];

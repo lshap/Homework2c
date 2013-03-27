@@ -11,7 +11,10 @@
 #import "Note.h"
 #import "Location.h"
 #import "LMSDetailViewController.h"
+#import "LMSAddNoteViewController.h"
 
 @interface LMSMasterViewController : UITableViewController
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation* lastLocation;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @end

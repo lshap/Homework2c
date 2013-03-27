@@ -17,13 +17,12 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSString* descriptionText;
 @property (strong, nonatomic) NSString* titleText;
-//@property (strong, nonatomic) CLLocation* location;
+@property (strong, nonatomic) CLLocation* location;
 @property CLLocationCoordinate2D coord;
 @property double latitude;
 @property double longitude;
 
 -(void) setDescriptionText:(NSString*)description;
 -(void) setTitleText:(NSString*)titletext;
--(void) setLatitude:(double)currentlatitude;
--(void) setLongitude:(double)currentlongitude;
+-(void) setViewCoordinate:(CLLocationCoordinate2D) newcoord;
 @end
