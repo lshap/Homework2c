@@ -27,29 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    self.tableView.delegate = self;
     _notes = [[NSMutableArray alloc]init];
     
     _locationManager = [[CLLocationManager alloc]init];
     _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
     _locationManager.delegate = self;
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Note" inManagedObjectContext:_managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSError *error;
-    self.notes = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
-//    NSArray *fetchedObjects = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+       [self updateTableData];
+    
     self.title = @"Notes";
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-     for (Note *info in self.notes) {
-         Note* note = info;
-         Location* location = note.location;
-     }
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +71,7 @@
 
         CLLocationDegrees lat = currnote.location.latitude.doubleValue;
         CLLocationDegrees lon = currnote.location.longitude.doubleValue;
-        CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lat,lon);
+        CLLocationCoordinate2D coord =  CLLocationCoordinate2DMake(lat,lon);
     [detailViewController setViewCoordinate: coord];
     }
     
@@ -119,6 +108,7 @@
     }
     
     [self.locationManager stopUpdatingLocation];
+    [self updateTableData];
     [self.tableView reloadData];
 }
 
@@ -131,6 +121,16 @@
 }
 
 #pragma mark - Table view data source
+
+-(void)updateTableData
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Note" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    self.notes = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
