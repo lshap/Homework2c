@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9C0EBFA6170286A6009C1A34 /* LMSAddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EBFA5170286A6009C1A34 /* LMSAddNoteViewController.m */; };
+		9C0EBFAB17029667009C1A34 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EBFA717029667009C1A34 /* backbutton.png */; };
+		9C0EBFAC17029667009C1A34 /* bigaddnewnote.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EBFA817029667009C1A34 /* bigaddnewnote.png */; };
+		9C0EBFAD17029667009C1A34 /* cancelbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EBFA917029667009C1A34 /* cancelbutton.png */; };
+		9C0EBFAE17029667009C1A34 /* createbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EBFAA17029667009C1A34 /* createbutton.png */; };
+		9C0EBFB01702987C009C1A34 /* Avenir.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EBFAF1702987C009C1A34 /* Avenir.ttc */; };
 		9C3350EE1700A08A002599D5 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3350ED1700A08A002599D5 /* Location.m */; };
 		9C3350F11700A09A002599D5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3350F01700A09A002599D5 /* Note.m */; };
 		9C95128116FE79B8000F72D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95128016FE79B8000F72D1 /* UIKit.framework */; };
@@ -47,6 +52,11 @@
 /* Begin PBXFileReference section */
 		9C0EBFA4170286A6009C1A34 /* LMSAddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSAddNoteViewController.h; sourceTree = "<group>"; };
 		9C0EBFA5170286A6009C1A34 /* LMSAddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSAddNoteViewController.m; sourceTree = "<group>"; };
+		9C0EBFA717029667009C1A34 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backbutton.png; path = ../../Homework2b/Homework2b/backbutton.png; sourceTree = "<group>"; };
+		9C0EBFA817029667009C1A34 /* bigaddnewnote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigaddnewnote.png; path = ../../Homework2b/Homework2b/bigaddnewnote.png; sourceTree = "<group>"; };
+		9C0EBFA917029667009C1A34 /* cancelbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cancelbutton.png; path = ../../Homework2b/Homework2b/cancelbutton.png; sourceTree = "<group>"; };
+		9C0EBFAA17029667009C1A34 /* createbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = createbutton.png; path = ../../Homework2b/Homework2b/createbutton.png; sourceTree = "<group>"; };
+		9C0EBFAF1702987C009C1A34 /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.ttc; sourceTree = "<group>"; };
 		9C3350EC1700A08A002599D5 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		9C3350ED1700A08A002599D5 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		9C3350EF1700A09A002599D5 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
@@ -150,6 +160,10 @@
 				9C95129116FE79B8000F72D1 /* LMSAppDelegate.h */,
 				9C95129216FE79B8000F72D1 /* LMSAppDelegate.m */,
 				9C95129A16FE79B8000F72D1 /* MainStoryboard.storyboard */,
+				9C0EBFA717029667009C1A34 /* backbutton.png */,
+				9C0EBFA817029667009C1A34 /* bigaddnewnote.png */,
+				9C0EBFA917029667009C1A34 /* cancelbutton.png */,
+				9C0EBFAA17029667009C1A34 /* createbutton.png */,
 				9C0EBFA4170286A6009C1A34 /* LMSAddNoteViewController.h */,
 				9C0EBFA5170286A6009C1A34 /* LMSAddNoteViewController.m */,
 				9C9512CA16FEA673000F72D1 /* LMSDetailViewController.h */,
@@ -168,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				9C95128A16FE79B8000F72D1 /* Notes-Info.plist */,
+				9C0EBFAF1702987C009C1A34 /* Avenir.ttc */,
 				9C95128B16FE79B8000F72D1 /* InfoPlist.strings */,
 				9C95128E16FE79B8000F72D1 /* main.m */,
 				9C95129016FE79B8000F72D1 /* Notes-Prefix.pch */,
@@ -274,6 +289,11 @@
 				9C95129716FE79B8000F72D1 /* Default@2x.png in Resources */,
 				9C95129916FE79B8000F72D1 /* Default-568h@2x.png in Resources */,
 				9C95129C16FE79B8000F72D1 /* MainStoryboard.storyboard in Resources */,
+				9C0EBFAB17029667009C1A34 /* backbutton.png in Resources */,
+				9C0EBFAC17029667009C1A34 /* bigaddnewnote.png in Resources */,
+				9C0EBFAD17029667009C1A34 /* cancelbutton.png in Resources */,
+				9C0EBFAE17029667009C1A34 /* createbutton.png in Resources */,
+				9C0EBFB01702987C009C1A34 /* Avenir.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

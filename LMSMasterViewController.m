@@ -155,6 +155,8 @@
     
     // Set up the cell...
     Note *info = [_notes objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir" size:20];
+    
     cell.textLabel.text = info.title;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",
                                  info.title];

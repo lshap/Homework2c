@@ -31,6 +31,10 @@
     self.titleInputField.delegate = self;
     self.descriptionInputField.delegate = self;
     
+    
+    self.titleLabel.font = [UIFont fontWithName:@"Avenir" size:20];
+    self.descriptionLabel.font = [UIFont fontWithName:@"Avenir" size:20];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];

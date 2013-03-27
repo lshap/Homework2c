@@ -26,6 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.noteDescriptionLabel.font =  [UIFont fontWithName:@"Avenir" size:20];
+    self.noteTitleLabel.font =  [UIFont fontWithName:@"Avenir" size:25];
+    
     self.noteDescriptionLabel.text = _descriptionText;
     self.noteTitleLabel.text = _titleText;
 }

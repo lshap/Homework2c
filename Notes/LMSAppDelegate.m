@@ -47,17 +47,6 @@
                                    entityForName:@"Note" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-//
-//    
-//    
-//
-//    for (Note *info in fetchedObjects) {
-//        NSLog(@"Title: %@", [info valueForKey:@"title"]);
-//        Location *loc = info.location;
-//        NSLog(@"Location Latitude: %@", loc.latitude);
-//         NSLog(@"Location Longitude: %@", loc.longitude);
-//    }
-    
     return YES;
 }
 							

@@ -11,5 +11,7 @@
 @interface LMSAddNoteViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleInputField;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionInputField;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
